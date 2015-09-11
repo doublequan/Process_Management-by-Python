@@ -1,0 +1,5 @@
+#setup.py
+
+import py2exe
+
+setup(console=["process_management.py"])
