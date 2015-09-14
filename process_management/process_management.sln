@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "process_management", "process_management\process_management.pyproj", "{F2F7CF88-197E-4D10-A10E-2A32619525EF}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Process_Management", "Process_Management\Process_Management.pyproj", "{AD83ACD1-1384-4494-930A-0090B46FDF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2F7CF88-197E-4D10-A10E-2A32619525EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2F7CF88-197E-4D10-A10E-2A32619525EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD83ACD1-1384-4494-930A-0090B46FDF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD83ACD1-1384-4494-930A-0090B46FDF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

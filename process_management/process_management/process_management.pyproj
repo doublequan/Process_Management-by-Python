@@ -3,15 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>f2f7cf88-197e-4d10-a10e-2a32619525ef</ProjectGuid>
+    <ProjectGuid>ad83acd1-1384-4494-930a-0090b46fdf77</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>process_management.py</StartupFile>
+    <StartupFile>Process_Management.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>process_management</Name>
-    <RootNamespace>process_management</RootNamespace>
+    <Name>Process_Management</Name>
+    <RootNamespace>Process_Management</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="process_management.py" />
+    <Compile Include="Kill_process.py" />
+    <Compile Include="Process_Management.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
