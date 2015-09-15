@@ -7,11 +7,12 @@ NORMAL = 1
 CONTAINS = 2
 START_WITH = 3 
 
-def killProcess(list, flag = NORMAL):
+def killProcess(list, flag = NORMAL, logger = None):
     ''' kill the Process by the input @name
         flag   CONTAINS : kill all the precesses that contain @name
              START_WITH : kill all the precesses that start with @name
                  NORMAL : kill all the precesses that has the exactly same name with the argument @name
+        return the processID and precessName of the killed process
     '''
     #form the sql query  
     names = list.copy()
@@ -48,10 +49,10 @@ def killProcess(list, flag = NORMAL):
                       for process in c.Win32_Process(ProcessId=ia_pid):
                           #TODO:
                           #write log
-                          print 'Killed ' + str(process.ProcessId) + str(process.Name)
-                          #process.Terminate()
-                          #print process.ProcessId, process.Name
-                      #for ia_p in ia_process:
-                            # Terminate process
-                             #r = ia_p.Terminate()
+                   #       print 'Killed ' + str(process.ProcessId) + str(process.Name)
+                          if(logger != None):
+                              logger.info('Killed ' + str(process.ProcessId) + '||' + str(process.Name));
+                          process.Terminate()
+                          #return process.ProcessId, process.Name
+
 
