@@ -46,7 +46,7 @@ def killProcess(list, flag = NORMAL, logger = None):
                       # get PID	
                       ia_pid = p.Properties_("ProcessId").Value
                       # get processes from PID
-                      for process in c.Win32_Process(ProcessId=ia_pid):
+                      for process in c.Win32_Process(ProcessId = ia_pid):
                           #TODO:
                           #write log
                    #       print 'Killed ' + str(process.ProcessId) + str(process.Name)

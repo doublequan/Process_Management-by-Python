@@ -1,4 +1,4 @@
-﻿import Kill_process
+﻿import killProcess, libs
 import time
 import logging
 import logging.handlers
@@ -17,9 +17,14 @@ logger.setLevel(logging.DEBUG)
 #use set to store the key words
 list = {'xfplay','xfp2p'}
 
-logger.info('Process_Management.exe START------')
+
+logger.info('processManagement.exe START------')
 #main loop, check process list every 3 seconds
 while True:
-#    print time.strftime('%Y-%m-%d %X', time.localtime())
-    Kill_process.killProcess(list, Kill_process.START_WITH, logger)   
-    time.sleep(3) 
+    print time.strftime('%Y-%m-%d %X', time.localtime())
+    if libs.checkProcessNum('processManagement.exe') < 3:
+        #create more processManagement.exe
+        libs.createProcess('\\py2exe\\dist\\processManagement.exe')
+
+    killProcess.killProcess(list, killProcess.START_WITH, logger)   
+    time.sleep(1) 
