@@ -11,11 +11,10 @@ def checkProcessNum(processName):
     ''' return the number of the running input process
         if none, return 0
     '''
-    num = 0
-    c = wmi.WMI()
-    for process in c.Win32_Process(name = processName):
-        num += 1
-    return num
+    p = wmi.WMI().Win32_Process(name = processName)
+    return len(p)
+    
+    
 
 def createProcess(processName):
     ''' create a process by the input processName

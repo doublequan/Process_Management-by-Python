@@ -12,7 +12,7 @@ handler.setFormatter(formatter)
 
 logger = logging.getLogger('p_m_log')
 logger.addHandler(handler)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 #use set to store the key words
 list = {'xfplay','xfp2p'}
@@ -24,7 +24,7 @@ while True:
     print time.strftime('%Y-%m-%d %X', time.localtime())
     if libs.checkProcessNum('processManagement.exe') < 3:
         #create more processManagement.exe
-        libs.createProcess('\\py2exe\\dist\\processManagement.exe')
+        libs.createProcess('\\myProcessManagement\\dist\\processManagement.exe')
 
     killProcess.killProcess(list, killProcess.START_WITH, logger)   
     time.sleep(1) 
